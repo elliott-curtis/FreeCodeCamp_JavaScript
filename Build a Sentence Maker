@@ -1,0 +1,21 @@
+let adjective = "fuzzy";
+let noun = "duck";
+let verb = "full";
+let place = "pond";
+let adjective2 = "wet";
+let noun2 = "worms";
+
+let firstStory = "Once upon a time, there was a(n) " + adjective + " " + noun + " who loved to eat " + noun2 + ". The " + noun + " lived in a " + place + " and had " + adjective2 + " nostrils that blew fire when it was " + verb + ".";
+
+console.log("First story: " + firstStory);
+
+adjective = "hairy";
+noun = "hippo";
+verb = "tired";
+place = "swamp";
+adjective2 = "sticky";
+noun2 = "fruit";
+
+let secondStory = "Once upon a time, there was a(n) " + adjective + " " + noun + " who loved to eat " + noun2 + ". The " + noun + " lived in a " + place + " and had " + adjective2 + " nostrils that blew fire when it was " + verb + ".";
+
+console.log("Second story: " + secondStory);
