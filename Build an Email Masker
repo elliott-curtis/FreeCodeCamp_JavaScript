@@ -1,0 +1,22 @@
+const maskEmail = (email) => {
+  
+  const atIndex = email.indexOf("@");
+  // finds the index of @
+  const firstChar = email[0];
+  // identifies the character at index 0
+  const lastChar = email[atIndex - 1];
+  // identifies the character before @
+  const stars = "*".repeat(atIndex - 2);
+  // creates a string of *'s proportional to the length of the atIndex -2
+  const maskedEmail = firstChar + stars + lastChar + email.slice(atIndex);
+  // creates a new email prefix by replacing the desired section with *'s
+  return maskedEmail;
+}
+
+let email = "apple.pie@example.com";
+console.log(maskEmail(email)); 
+// a********e@example.com
+
+let email2 = "freecodecamp@example.com";
+console.log(maskEmail(email2)); 
+// f**********p@example.com
