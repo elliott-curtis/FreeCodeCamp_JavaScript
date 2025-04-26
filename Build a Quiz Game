@@ -1,0 +1,67 @@
+const questions = [];
+
+const question1 = {
+  category: "Dogs",
+  question: "Which dog is the largest?",
+  choices: ["Chihuahua", "Cocker Spaniel", "Great Dane"],
+  answer: "Great Dane",
+};
+
+const question2 = {
+  category: "Colours",
+  question: "Which colour is the same as the sun?",
+  choices: ["Red", "Blue", "Yellow"],
+  answer: "Yellow",
+};
+
+const question3 = {
+  category: "Numbers",
+  question: "Which number is even?",
+  choices: ["2", "5", "321"],
+  answer: "2",
+};
+
+const question4 = {
+  category: "Shapes",
+  question: "Which shapes has the most sides?",
+  choices: ["Triangle", "Square", "Octagon"],
+  answer: "Octagon",
+};
+
+const question5 = {
+  category: "Sports",
+  question: "Which sport does NOT allow you to use your hands?",
+  choices: ["Darts", "Football", "Volleyball"],
+  answer: "Football",
+};
+
+questions.push(question1, question2, question3, question4, question5);
+
+function getRandomQuestion(questions) {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  const randomQuestion = questions[randomIndex];
+  return randomQuestion;
+}
+
+function getRandomComputerChoice(choices) {
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  const randomComputerChoice = choices[randomIndex];
+  return randomComputerChoice;
+}
+
+function getResults(randomQuestion, randomComputerChoice) {
+  if (randomComputerChoice == randomQuestion.answer) {
+  return "The computer's choice is correct!";
+ } else {
+   return `The computer's choice is wrong. The correct answer is: ${randomQuestion.answer}`;
+ }
+}
+
+const randomQuestion = getRandomQuestion(questions);
+const randomComputerChoice = getRandomComputerChoice(randomQuestion.choices);
+
+console.log(randomQuestion);
+console.log(randomComputerChoice);
+console.log(getResults(randomQuestion, randomComputerChoice));
+
+   
